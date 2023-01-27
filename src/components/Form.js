@@ -108,32 +108,32 @@ class Form extends React.Component {
 }
 
 Form.propTypes = {
-  cardName: PropType.string.isRequired,
-  cardDescription: PropType.string.isRequired,
-  cardAttr1: PropType.string.isRequired,
-  cardAttr2: PropType.string.isRequired,
-  cardAttr3: PropType.string.isRequired,
-  cardImage: PropType.string.isRequired,
-  cardRare: PropType.string.isRequired,
-  cardTrunfo: PropType.bool.isRequired,
-  // hasTrunfo: PropType.bool.isRequired,
-  isSaveButtonDisabled: PropType.bool.isRequired,
+  cardName: PropType.string,
+  cardDescription: PropType.string,
+  cardAttr1: PropType.string,
+  cardAttr2: PropType.string,
+  cardAttr3: PropType.string,
+  cardImage: PropType.string,
+  cardRare: PropType.string,
+  cardTrunfo: PropType.bool,
+  // hasTrunfo: PropType.bool,
+  isSaveButtonDisabled: PropType.bool,
   onInputChange: PropType.func.isRequired,
   onSaveButtonClick: PropType.func.isRequired,
 };
-// Form.defaultProps = {
-//   cardName: PropType.string,
-//   cardDescription: PropType.string,
-//   cardAttr1: PropType.string,
-//   cardAttr2: PropType.string,
-//   cardAttr3: PropType.string,
-//   cardImage: PropType.string,
-//   cardRare: PropType.string,
-//   cardTrunfo: false,
-//   hasTrunfo: false,
-//   isSaveButtonDisabled: true,
-//   onInputChange: PropType.func,
-//   onSaveButtonClick: PropType.func,
-// };
+Form.defaultProps = {
+  cardName: '',
+  cardDescription: '',
+  cardAttr1: '',
+  cardAttr2: '',
+  cardAttr3: '',
+  cardImage: '',
+  cardRare: 'normal',
+  cardTrunfo: false,
+  // hasTrunfo: false,
+  isSaveButtonDisabled: true,
+  // onInputChange: PropType.func,
+  // onSaveButtonClick: PropType.func,
+};
 
 export default Form;
