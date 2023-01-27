@@ -1,7 +1,21 @@
 import React from 'react';
+import PropType from 'prop-types';
 
 class Form extends React.Component {
   render() {
+    const { cardName } = this.props;
+    const { cardDescription } = this.props;
+    const { cardAttr1 } = this.props;
+    const { cardAttr2 } = this.props;
+    const { cardAttr3 } = this.props;
+    const { cardImage } = this.props;
+    const { cardRare } = this.props;
+    const { cardTrunfo } = this.props;
+    const { hasTrunfo } = this.props;
+    const { isSaveButtonDisabled } = this.props;
+    const { onInputChange } = this.props;
+    const { onSaveButtonClick } = this.props;
+
     return (
       <form>
         <label htmlFor="name">
@@ -71,5 +85,34 @@ class Form extends React.Component {
     );
   }
 }
+
+Form.propTypes = {
+  cardName: PropType.string.isRequired,
+  cardDescription: PropType.string.isRequired,
+  cardAttr1: PropType.string.isRequired,
+  cardAttr2: PropType.string.isRequired,
+  cardAttr3: PropType.string.isRequired,
+  cardImage: PropType.string.isRequired,
+  cardRare: PropType.string.isRequired,
+  cardTrunfo: PropType.bool.isRequired,
+  hasTrunfo: PropType.bool.isRequired,
+  isSaveButtonDisabled: PropType.bool.isRequired,
+  onInputChange: PropType.func.isRequired,
+  onSaveButtonClick: PropType.func.isRequired,
+};
+// Form.defaultProps = {
+//   cardName: PropType.string,
+//   cardDescription: PropType.string,
+//   cardAttr1: PropType.string,
+//   cardAttr2: PropType.string,
+//   cardAttr3: PropType.string,
+//   cardImage: PropType.string,
+//   cardRare: PropType.string,
+//   cardTrunfo: false,
+//   hasTrunfo: false,
+//   isSaveButtonDisabled: true,
+//   onInputChange: PropType.func,
+//   onSaveButtonClick: PropType.func,
+// };
 
 export default Form;
