@@ -19,6 +19,7 @@ class Form extends React.Component {
     return (
       <form>
         <label htmlFor="cardName">
+          Nome:
           <input
             type="text"
             name="cardName"
@@ -27,7 +28,9 @@ class Form extends React.Component {
             data-testid="name-input"
           />
         </label>
+        <br />
         <label htmlFor="cardDescription">
+          Descrição:
           <input
             type="textarea"
             name="cardDescription"
@@ -36,7 +39,9 @@ class Form extends React.Component {
             data-testid="description-input"
           />
         </label>
+        <br />
         <label htmlFor="cardAttr1">
+          Atributo 1:
           <input
             type="number"
             name="cardAttr1"
@@ -45,7 +50,9 @@ class Form extends React.Component {
             data-testid="attr1-input"
           />
         </label>
+        <br />
         <label htmlFor="cardAttr2">
+          Atributo 2:
           <input
             type="number"
             name="cardAttr2"
@@ -54,7 +61,9 @@ class Form extends React.Component {
             data-testid="attr2-input"
           />
         </label>
+        <br />
         <label htmlFor="cardAttr3">
+          Atributo 3:
           <input
             type="number"
             name="cardAttr3"
@@ -63,7 +72,9 @@ class Form extends React.Component {
             data-testid="attr3-input"
           />
         </label>
+        <br />
         <label htmlFor="cardImage">
+          Link da imagem:
           <input
             type="text"
             name="cardImage"
@@ -72,7 +83,9 @@ class Form extends React.Component {
             data-testid="image-input"
           />
         </label>
+        <br />
         <label htmlFor="cardRare">
+          Raridade:
           <select
             name="cardRare"
             value={ cardRare }
@@ -84,7 +97,9 @@ class Form extends React.Component {
             <option>muito raro</option>
           </select>
         </label>
+        <br />
         <label htmlFor="cardTrunfo">
+          Super Trunfo?
           <input
             type="checkbox"
             name="cardTrunfo"
@@ -93,10 +108,12 @@ class Form extends React.Component {
             data-testid="trunfo-input"
           />
         </label>
+        <br />
         <label htmlFor="isSaveButtonDisabled">
           <input
             type="button"
             name="save"
+            value="Salvar"
             disabled={ isSaveButtonDisabled }
             onClick={ onSaveButtonClick }
             data-testid="save-button"
