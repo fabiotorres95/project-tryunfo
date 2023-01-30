@@ -95,7 +95,7 @@ class Form extends React.Component {
         </label>
         <label htmlFor="isSaveButtonDisabled">
           <input
-            type="isSaveButtonDisabled"
+            type="button"
             name="save"
             disabled={ isSaveButtonDisabled }
             onClick={ onSaveButtonClick }
@@ -124,9 +124,9 @@ Form.propTypes = {
 Form.defaultProps = {
   cardName: '',
   cardDescription: '',
-  cardAttr1: '',
-  cardAttr2: '',
-  cardAttr3: '',
+  cardAttr1: '0',
+  cardAttr2: '0',
+  cardAttr3: '0',
   cardImage: '',
   cardRare: 'normal',
   cardTrunfo: false,
