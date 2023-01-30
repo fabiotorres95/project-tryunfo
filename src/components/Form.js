@@ -132,8 +132,6 @@ Form.defaultProps = {
   cardTrunfo: false,
   // hasTrunfo: false,
   isSaveButtonDisabled: true,
-  // onInputChange: PropType.func,
-  // onSaveButtonClick: PropType.func,
 };
 
 export default Form;
