@@ -113,7 +113,7 @@ class App extends React.Component {
     const { cardImage } = this.state;
     const { cardRare } = this.state;
     const { cardTrunfo } = this.state;
-    // const { hasTrunfo } = this.state;
+    const { hasTrunfo } = this.state;
     const { isSaveButtonDisabled } = this.state;
 
     return (
@@ -128,6 +128,7 @@ class App extends React.Component {
           cardImage={ cardImage }
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
+          hasTrunfo={ hasTrunfo }
           isSaveButtonDisabled={ isSaveButtonDisabled }
           onInputChange={ this.onInputChange }
           onSaveButtonClick={ this.onSaveButtonClick }

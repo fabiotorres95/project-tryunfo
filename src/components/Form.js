@@ -11,10 +11,18 @@ class Form extends React.Component {
     const { cardImage } = this.props;
     const { cardRare } = this.props;
     const { cardTrunfo } = this.props;
-    // const { hasTrunfo } = this.props;
+    const { hasTrunfo } = this.props;
     const { isSaveButtonDisabled } = this.props;
     const { onInputChange } = this.props;
     const { onSaveButtonClick } = this.props;
+
+    const checkBox = (<input
+      type="checkbox"
+      name="cardTrunfo"
+      checked={ cardTrunfo }
+      onChange={ onInputChange }
+      data-testid="trunfo-input"
+    />);
 
     return (
       <form>
@@ -100,13 +108,9 @@ class Form extends React.Component {
         <br />
         <label htmlFor="cardTrunfo">
           Super Trunfo?
-          <input
-            type="checkbox"
-            name="cardTrunfo"
-            checked={ cardTrunfo }
-            onChange={ onInputChange }
-            data-testid="trunfo-input"
-          />
+          { hasTrunfo
+            ? <p>Você já tem um Super Trunfo em seu baralho</p>
+            : checkBox }
         </label>
         <br />
         <label htmlFor="isSaveButtonDisabled">
@@ -133,7 +137,7 @@ Form.propTypes = {
   cardImage: PropType.string,
   cardRare: PropType.string,
   cardTrunfo: PropType.bool,
-  // hasTrunfo: PropType.bool,
+  hasTrunfo: PropType.bool,
   isSaveButtonDisabled: PropType.bool,
   onInputChange: PropType.func.isRequired,
   onSaveButtonClick: PropType.func.isRequired,
@@ -147,7 +151,7 @@ Form.defaultProps = {
   cardImage: '',
   cardRare: 'normal',
   cardTrunfo: false,
-  // hasTrunfo: false,
+  hasTrunfo: false,
   isSaveButtonDisabled: true,
 };
 
