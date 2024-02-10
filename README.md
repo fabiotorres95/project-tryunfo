@@ -8,3 +8,6 @@ Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua cr
 - quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
 - quais arquivos/pastas foram desenvolvidos pela Trybe.
 -->
+Projeto Tryunfo - Trybe curso Front-End seção 3: "Componentes com Estado, Eventos e Formulários com React"
+
+Front-End - projeto 3 de 10
